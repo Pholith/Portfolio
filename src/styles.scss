@@ -7,7 +7,7 @@ $darkGrey : #131313;
     font-family: Riangriung;
     src: url(src\assets\font\Riangriung.otf);
 }
-  
+
 
 * {
     color: white;
@@ -38,6 +38,7 @@ p.myname {
     margin-top: 1em;
     margin-bottom: 0;
 }
+
 .titre {
     font-size: x-large;
 }
@@ -51,6 +52,7 @@ p.myname {
     padding-bottom: 1.8em;
     border-radius: 5px;
 }
+
 .links img {
     width: 4em;
     height: 4em;
@@ -58,6 +60,7 @@ p.myname {
     margin-right: 1em;
 
 }
+
 img.cv-icon {
     height: 4em;
     width: auto;
@@ -68,12 +71,18 @@ img.cv-icon {
     border-radius: 1em;
 }
 
-.project-description img {
-    width: 200px;
+.project-description a {
+    display: contents;
+}
+
+.project-description a img {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    width: 100%;
     height: auto;
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em;
-    font-size: larger;
+    border-radius: 1em / 0.8em;
+    //border-top-left-radius: 1em;
+    //border-bottom-left-radius: 1em;
 }
 
 .project-description p {
@@ -81,17 +90,15 @@ img.cv-icon {
     font-size: 0.8em;
 }
 
-.project-description a {
-    width: min-content;
-    //display: contents;
-}
 .project-description .name {
-    font-size: 0.9em;
+    font-size: 1.2em;
     margin-top: 0.8em;
 }
+
 .plants-vs-zombies {
     font-family: Riangriung;
 }
+
 /*
 .biography img {
     width: 200px;
@@ -107,6 +114,12 @@ body {
     margin-top: 1.2em;
     min-height: 10vh;
 }
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
 
 /*
 [class*="col-"],
