@@ -1,8 +1,43 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="container-fluid">
+    <header> </header>
 
+    <div class="biography row w-75 mx-auto">
+        <img class="col-md-offset-3 col-lg-3 col-md-4" src="../assets/images/presentation.png" alt="Photo de moi">
 
-<app-project-description> </app-project-description>
+        <div class="container col-lg-9 col-md-8">
+            <p class="myname">
+                Vincent Buisset
+            </p>
+            <p class="titre">
+                Etudiant en 2ème année de DUT Informatique
+            </p>
+            <p class="biography-text">
+                Organisé, rigoureux, sérieux et aimant le travail d’équipe, je recherche d’un contrat en apprentissage
+                dans le cadre d’une école d’ingénieur pour 3 ans.
+            </p>
+        </div>
 
+    </div>
+    <div class="row links">
+        <div class="col-md-6">
+            <h3> Mon CV </h3>
+            <a href="../assets/CV.pdf"> <img class="cv-icon" src="../assets/images/documentDl.png"
+                    alt="logo téléchargement"> </a>
 
+        </div>
 
-<router-outlet></router-outlet>
+        <div class="col-md-6 logos">
+            <h3> Mes réseaux </h3>
+            <a href="https://github.com/Pholith" target="_blank"> <img src="../assets/images/logoGithub.png"
+                    alt="logo github"> </a>
+            <a href="https://www.linkedin.com/in/vincent-buisset-067980174/" target="_blank"> <img
+                    src="../assets/images/logoLinkedin.png" alt="logo linkedin"> </a>
+        </div>
+    </div>
+
+    <div class="col-lg-11 h3 col-md-12 col-lg-offset-1 mx-auto">
+        <h3> Quelques projets </h3>
+
+        <app-project-description class="app-project-description"> </app-project-description>
+
+    </div>

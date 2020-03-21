@@ -1,1 +1,119 @@
 /* You can add global styles to this file, and also import other style files */
+
+$lightGrey : #262626;
+$darkGrey : #131313;
+
+@font-face {
+    font-family: Riangriung;
+    src: url(src\assets\font\Riangriung.otf);
+}
+  
+
+* {
+    color: white;
+    font-family: Candara, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h3 {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.biography {
+    margin-top: 2vw;
+}
+
+.biography .biography-text {
+    line-height: normal;
+    font-size: larger;
+}
+
+.biography img {
+    border-radius: 2em / 1em;
+}
+
+p.myname {
+    font-size: xx-large;
+    line-height: 0.7em;
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+.titre {
+    font-size: x-large;
+}
+
+.links {
+    font-size: larger;
+    background-color: $darkGrey;
+    text-align: center;
+    margin-top: 1em;
+    padding: 0;
+    padding-bottom: 1.8em;
+    border-radius: 5px;
+}
+.links img {
+    width: 4em;
+    height: 4em;
+    margin-left: 1em;
+    margin-right: 1em;
+
+}
+img.cv-icon {
+    height: 4em;
+    width: auto;
+}
+
+.project-description {
+    background-color: $darkGrey;
+    border-radius: 1em;
+}
+
+.project-description img {
+    width: 200px;
+    height: auto;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    font-size: larger;
+}
+
+.project-description p {
+    margin-left: 0.5em;
+    font-size: 0.8em;
+}
+
+.project-description a {
+    width: min-content;
+    //display: contents;
+}
+.project-description .name {
+    font-size: 0.9em;
+    margin-top: 0.8em;
+}
+.plants-vs-zombies {
+    font-family: Riangriung;
+}
+/*
+.biography img {
+    width: 200px;
+    height: 200px;
+}*/
+body {
+    background-color: $lightGrey;
+    padding-top: 10px;
+
+}
+
+.project-description {
+    margin-top: 1.2em;
+    min-height: 10vh;
+}
+
+/*
+[class*="col-"],
+footer {
+    background-color: lightslategray;
+    border: 2px solid black;
+    border-radius: 6px;
+    line-height: 40px;
+    //text-align: center;
+}*/

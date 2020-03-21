@@ -1,1 +1,12 @@
-<p>project-description works!</p>
+<div *ngFor="let project of projects" class="project-description row">
+    <a href="{{ project.link }}" target="_blank"> <img class="col-lg-5 " [src]="project.img" alt="screenshot"> </a>
+
+    <div class="col-lg-7">
+        <p class="name" [ngClass]="{'plants-vs-zombies': project.name === 'Plants-vs-Zombies'}">
+            {{ project.name }}
+        </p>
+        <p>
+            {{ project.description }}
+        </p>
+    </div>
+</div>
