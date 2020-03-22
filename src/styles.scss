@@ -119,6 +119,10 @@ a.disabled {
     pointer-events: none;
     cursor: default;
 }
+
+.marginbot {
+    margin-bottom: 2em;
+}
 canvas {
     position: fixed;
     z-index: -10;

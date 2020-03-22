@@ -4,9 +4,7 @@
         <p class="name" [ngClass]="{'plants-vs-zombies': project.name === 'Plants-vs-Zombies'}">
             {{ project.name }}
         </p>
-        <p>
-            {{ project.description }}
-        </p>
+        <div [innerHTML]="project.description"></div>
     </div>
 
     <a href="{{ project.link }}" [ngClass]="{'disabled': project.link === '' }" target="_blank"> <img class="col-lg-5 " [src]="project.img" alt="screenshot"> </a>
