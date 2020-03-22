@@ -22,7 +22,7 @@ Ce projet personnel est sûrement celui qui m'a le plus appris en programmation 
     },
     {
       name: "Plants-vs-Zombies",
-      img: "../assets/images/screenPVZ.png",
+      img: "../assets/images/screenPVZ.gif",
       description: "Ce projet est une reproduction du jeu \"Plants VS Zombies\" dans le cadre d'un cours sur la programmation orientée objet. \
 Il a été réalisé en en binôme avec le language Java. Ce projet m'a permis d'étendre mes connaissances en poo et à bien répartir les tâches.",
       link: "https://github.com/Pholith/Plants-VS-Zombies"
