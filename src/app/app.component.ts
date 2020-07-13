@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import * as p5 from 'p5';
+import * as p5 from 'p5';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +12,10 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     //this.createCanvas();
   }
+}
 
-/*  private p5;
+  /*
+  private p5;
 
 
   private createCanvas() {
@@ -24,6 +26,7 @@ export class AppComponent implements OnInit {
 
     let gameObjects: GameObject[] = [];
     let toRemoveObjects : GameObject[] = [];
+    let filterCounter = 0;
 
     p.setup = () => {
       p.frameRate(900);
@@ -33,8 +36,8 @@ export class AppComponent implements OnInit {
 
     p.draw = () => {
       p.background("#262626")
-
-      gameObjects.push(new Square(p.mouseX, p.mouseY, p));
+      filterCounter ++;
+      if (!(filterCounter % 30)) gameObjects.push(new Square(p.mouseX, p.mouseY, p));
 
       // Retire les objects morts de la liste
       toRemoveObjects.forEach(obj => {
@@ -63,10 +66,10 @@ export class AppComponent implements OnInit {
     }
   }
 
+*/
 
 
-}
-
+/*
 class GameObject {
   constructor() {
   }
@@ -81,7 +84,12 @@ class GameObject {
   public destroyed() : boolean {
     return this.destoyed;
   }
+}
 
+class Utils {
+  static getRandomBetween<T, Array>(array: T[]) : T {
+    return array[Math.floor(Math.random() * array.length)]
+  }
 }
 
 class Square extends GameObject{
@@ -94,39 +102,51 @@ class Square extends GameObject{
 
     let random: number = Math.random()
 
-    this.direction = new p5.Vector(5 * (Math.random() - 0.5), 5 * (Math.random() - 0.5));
+    //this.direction = new p5.Vector(5 * (Math.random() - 0.5), 5 * (Math.random() - 0.5));
+    this.direction = Utils.getRandomBetween([new p5.Vector(-1, 0), new p5.Vector(1, 0), new p5.Vector(0, 1), new p5.Vector(0, -1)]),
 
-    this.sizeX = 2 + Math.random() * 2
+
+    this.sizeX = 8 + Math.random() * 2
     this.sizeY = this.sizeX
+    this.color = this.p.color(100 + Math.random() * 155, 100 +  Math.random() * 155, 100 + Math.random() * 155)
+    this.speed = 3;
   }
 
   private x: number;
   private y: number;
-
+  private speed: number;
+  private color: p5.Color;
   private direction: p5.Vector;
   private p;
 
   private liveTime: number;
-  private liveTimeMax: number = 1000;
+  private liveTimeMax: number = 8000;
 
   private sizeX: number;
   private sizeY: number;
 
   update(): void {
-    this.x += this.direction.x
-    this.y += this.direction.y
+    this.x += this.direction.x * this.speed;
+    this.y += this.direction.y * this.speed;
     this.liveTime += this.p.deltaTime;
+
+    if (Math.random() < 0.005) this.changeDirection();
 
     if (this.liveTime >= this.liveTimeMax) {
       this.destroy();
     }
+
     this.draw();
+  }
+
+  changeDirection() {
+    this.direction = Utils.getRandomBetween([new p5.Vector(-1, 0), new p5.Vector(1, 0), new p5.Vector(0, 1), new p5.Vector(0, -1)]);
   }
 
   draw(): void {
     this.p.noStroke();
-    this.p.fill(this.p.color("#f47a9d"));
-    this.p.rect(this.x - this.sizeX / 2, this.y - this.sizeY / 2, this.sizeX, this.sizeY);
-  }
-*/
-}
+    this.p.fill(this.p.color(20));
+    this.p.rect(this.x - this.sizeX / 2, this.y - this.sizeY / 2, this.sizeX, this.sizeY)
+  }*/
+
+

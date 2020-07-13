@@ -2,6 +2,7 @@
 
 $lightGrey : #262626;
 $darkGrey : #131313;
+$apointColor: #1b2132;
 
 @font-face {
     font-family: Riangriung;
@@ -24,12 +25,14 @@ h3 {
 }
 
 .biography .biography-text {
+    margin-top: 1.5em;
     line-height: normal;
     font-size: larger;
 }
 
 .biography img {
     border-radius: 2em / 1em;
+    object-fit: cover;
 }
 
 p.myname {
@@ -40,16 +43,16 @@ p.myname {
 }
 
 .titre {
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 .links {
     font-size: larger;
     background-color: $darkGrey;
     text-align: center;
-    margin-top: 1em;
+    margin-top: 5vh;
     padding: 0;
-    padding-bottom: 1.8em;
+    padding-bottom: 1.6em;
     border-radius: 5px;
 }
 
@@ -58,7 +61,11 @@ p.myname {
     height: 4em;
     margin-left: 1em;
     margin-right: 1em;
+    transition: all .2s ease;
+}
 
+.links img:hover {
+    transform: scale(1.1);
 }
 
 img.cv-icon {
@@ -75,24 +82,79 @@ img.cv-icon {
     display: contents;
 }
 
-.project-description a img {
+.project-description img {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    width: 100%;
-    height: auto;
     border-radius: 1em / 0.8em;
+
     //border-top-left-radius: 1em;
     //border-bottom-left-radius: 1em;
+    transition: all .2s ease-in;
+    object-fit: cover;
+}
+
+.project-description > img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .project-description div {
-    font-size: 0.8em;
+    font-size: 0.75em;
 }
 
 .project-description .name {
     font-size: 1.1em;
     margin-top: 0.8em;
 }
+
+// Informations sous le titre du projet
+div.project-informations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.7em;
+    margin-bottom: 1em;
+    background-color: $apointColor;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+div.project-informations a {
+    display: block;
+}
+
+// Images à dérouler
+.moreImages-visible img {
+    max-height: 16vw;
+    padding: 0.5em;
+    display: inline;
+}
+
+.moreImages-invisible {
+    display: none;
+}
+
+.moreImages-visible {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    animation: fade_in_show 0.5s
+}
+
+@keyframes fade_in_show {
+    0% {
+        opacity: 0;
+        transform: scale(0)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+/////////////////////////
 
 .plants-vs-zombies {
     font-family: Riangriung;
@@ -114,14 +176,20 @@ body {
     min-height: 10vh;
 }
 
+// Disable images and links 
 a.disabled {
-    pointer-events: none;
+    pointer-events: none; // Annule les clics et les animations
     cursor: default;
 }
+img.disabled {
+    pointer-events: none;
+}
+///////
 
 .marginbot {
     margin-bottom: 2em;
 }
+
 canvas {
     position: fixed;
     z-index: -10;

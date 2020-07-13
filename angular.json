@@ -95,7 +95,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": ["https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"]
           }
         },
         "lint": {
