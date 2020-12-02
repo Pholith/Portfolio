@@ -1,24 +1,46 @@
-<div *ngFor="let project of projects" class="project-description row">
+<div class="text-center">
+    <div class="filters w-auto d-inline-block">
+        <select (change)="onTechSelected($event.target.value)">
+            <option value=""> Technologie </option>
+            <option *ngFor="let tech of techsList"> {{ tech }} </option>
+        </select>
+        <select (change)="onContextSelected($event.target.value)">
+            <option value=""> Contexte </option>
+            <option *ngFor="let context of contextList"> {{ context }} </option>
+        </select>
+    </div>
+</div>
 
-    <div class="col-lg-9">
-        <p class="name">
-            {{ project.name }}
-        </p>
-        <div class="project-informations">
-            <a *ngIf="project.link" [href]="project.link"> Lien projet </a>
-            <div *ngIf="project.period"> Période: {{ project.period }} </div>
-            <div> Equipe: {{ project.team }} </div>
-            <div> Contexte: {{ project.context }} </div>
-            <div> Technologies: {{ project.technologies.join(" / ") }} </div>
-            <a *ngIf="project.gitLink" [href]="project.gitLink"> Git </a>
+<div class="d-flex flex-wrap justify-content-between">
+
+
+    <ng-container *ngFor="let project of showedProjects">
+        <div *ngIf="!project.hide" class="project-description row p-2 col-md-6">
+
+            <div [ngClass]="project.img ? 'col-lg-5' : 'col-lg-11'">
+                <p class="name">
+                    {{ project.name }}
+                </p>
+                <div class="project-informations d-flex flex-column">
+                    <a *ngIf="project.link" [href]="project.link"> Lien projet </a>
+                    <a *ngIf="project.video" [href]="project.video" target="_blank"> Vidéo du projet </a>
+                    <div *ngIf="project.period"> Période: {{ project.period }} </div>
+                    <div> Equipe: {{ project.team }} </div>
+                    <div> Contexte: {{ project.context }} </div>
+                    <div> Technologies: {{ project.technologies.join(" / ") }} </div>
+                    <div *ngIf="project.tools"> Outils: {{ project.tools.join(" / ") }} </div>
+                    <a *ngIf="project.gitLink" [href]="project.gitLink"> Git </a>
+                </div>
+                <div [innerHTML]="project.description"></div>
+            </div>
+
+            <img *ngIf="project.img" class="col-lg-7" [src]="project.img" alt="screenshot"
+                [class.disabled]="project.images === undefined" (click)="toggleImages($event)">
+
+            <div class="moreImages-invisible">
+                <img class="col-lg-7" *ngFor="let image of project.images" [src]="image" alt="screenshot">
+            </div>
         </div>
 
-        <div [innerHTML]="project.description"></div>
-    </div>
-
-    <img class="col-lg-3" [src]="project.img" alt="screenshot" [ngClass]="{'disabled': project.images === undefined }" (click)="toggleImages($event)">
-
-    <div class="moreImages-invisible">
-        <img *ngFor="let image of project.images" [src]="image" alt="screenshot">
-    </div>
+    </ng-container>
 </div>

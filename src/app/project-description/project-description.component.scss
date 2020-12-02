@@ -1,0 +1,91 @@
+@import "../../styles.scss";
+
+.filters {
+    margin-top: 5px;
+    margin-bottom: 1em;
+    border: 2em solid $darkGrey;
+    background-color: $darkGrey;
+    border-radius: 2em;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+
+    font-size: 0.7em;
+}
+
+.filters option {
+
+    font-size: 0.7em;
+}
+
+.project-description {
+    background-color: $darkGrey;
+    border-radius: 1em;
+    margin-bottom: 1.2em;
+    min-height: 10vh;
+}
+
+.project-description a {
+    display: contents;
+}
+
+.project-description img {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 1em / 0.8em;
+
+    //border-top-left-radius: 1em;
+    //border-bottom-left-radius: 1em;
+    transition: all .2s ease-in;
+    object-fit: cover;
+    
+}
+
+.project-description > img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.project-description div {
+    font-size: 0.8em;
+}
+
+.project-description .name {
+    font-size: 1.1em;
+    margin-top: 0.8em;
+}
+
+// Informations sous le titre du projet
+div.project-informations {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 0.8em;
+    margin-bottom: 1em;
+    background-color: $apointColor;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+div.project-informations a {
+    display: block;
+}
+
+// Images à dérouler
+.moreImages-visible img {
+    padding: 0.3em;
+    display: inline;
+}
+
+.moreImages-invisible {
+    display: none;
+}
+
+.moreImages-visible {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    animation: fade_in_show 0.5s
+}
