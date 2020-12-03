@@ -1,10 +1,10 @@
-<div *ngFor="let project of projects" class="project-description row">
+<div *ngFor="let project of projects" class="project-description row p-2 col-md-6">
 
-    <div class="col-lg-9">
+    <div class="col-lg-5">
         <p class="name">
             {{ project.name }}
         </p>
-        <div class="project-informations">
+        <div class="project-informations d-flex flex-column">
             <a *ngIf="project.link" [href]="project.link"> Lien projet </a>
             <div *ngIf="project.period"> Période: {{ project.period }} </div>
             <div> Equipe: {{ project.team }} </div>
@@ -16,9 +16,9 @@
         <div [innerHTML]="project.description"></div>
     </div>
 
-    <img class="col-lg-3" [src]="project.img" alt="screenshot" [ngClass]="{'disabled': project.images === undefined }" (click)="toggleImages($event)">
+    <img class="col-lg-7" [src]="project.img" alt="screenshot" [ngClass]="{'disabled': project.images === undefined }" (click)="toggleImages($event)">
 
     <div class="moreImages-invisible">
-        <img *ngFor="let image of project.images" [src]="image" alt="screenshot">
+        <img class="col-lg-7" *ngFor="let image of project.images" [src]="image" alt="screenshot">
     </div>
 </div>

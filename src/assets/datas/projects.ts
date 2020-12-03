@@ -8,15 +8,11 @@ var projects = [
     img: "../assets/images/screenONI.jpg",
     description:
       "Ensemble de mods (extensions) sur le jeu " +
-      asLink(
-        "Oxygen Not Included",
-        "https://www.klei.com/games/oxygen-not-included"
-      ) +
-      " de Klei , les mods sont des projets .NET C# qui utilisent la librairie " +
+      asLink("Oxygen Not Included", "https://www.klei.com/games/oxygen-not-included" ) +
+      " de Klei, les mods sont des projets .Net C# qui utilisent " +
       asLink("Harmony", "https://github.com/pardeike/Harmony/wiki") +
       " pour patcher les méthodes du jeu. \
-<br/>Ce projet personnel est sûrement celui qui m'a le plus appris en programmation orientée objet et en \"hacking\", il n'a pas été facile de comprendre et modifier le code du jeu qui est très complet et développé par des professionnels. \
-Ce projet m'a aussi appris l'importance de la maintenance du code sur le long terme (devoir rendre les mods accessibles malgré les mises à jour du jeu).",
+<br/>Ce projet personnel a été le plus formateur en programmation orientée objet et en \"hacking\".",
     period: "début 2019-actuel",
     team: "seul",
     technologies: ["C#", ".NET"] ,
@@ -27,8 +23,7 @@ Ce projet m'a aussi appris l'importance de la maintenance du code sur le long te
     name: "Plants-vs-Zombies",
     img: "../assets/images/screenPVZ.gif",
     description:
-      "Ce projet est une reproduction du jeu \"Plants VS Zombies\" dans le cadre d'un cours sur la programmation orientée objet. \
-Il projet m'a permis d'étendre mes connaissances en poo et à bien répartir les tâches.",
+      "Ce projet est une reproduction du jeu \"Plants VS Zombies\" dans le cadre d'un cours sur la programmation orientée objet.",
     link: "",
     period: "début 2019",
     team: "2",
@@ -40,13 +35,12 @@ Il projet m'a permis d'étendre mes connaissances en poo et à bien répartir le
     name: "Site web du chateau de Champs-Sur-Marne",
     img: "../assets/images/screenChateau.jpg",
     description: "Ce site web est mon premier projet tutoré. \
-L'objectif de ce projet est de promouvoir la culture locale et d'attirer de nouveaux visiteurs.\
- Il nous a permis de développer nos compétences en programmation web, communication, anglais et gestion de projet.",
+L'objectif de ce projet est de promouvoir la culture locale et d'attirer de nouveaux visiteurs.",
 
-    link: "http://vincent1.heliohost.org/Champs/Site-Chateau-Champs-sur-Marne/html/fr/main.php",
+    //link: "http://vincent1.heliohost.org/Champs/Site-Chateau-Champs-sur-Marne/html/fr/main.php",
     period: "2018-2019",
     team: "3",
-    technologies: ["HTML/CSS", "PHP", "Javascript"] ,
+    technologies: ["HTML", "CSS", "PHP", "Javascript"] ,
     gitLink: "https://github.com/Pholith/Site-Chateau-Champs-sur-Marne",
     context: "Scolaire",
     images: ["../assets/images/friseChateau.png", "../assets/images/afficheChateau.png", "../assets/images/screenChateau3.png"]
@@ -56,7 +50,7 @@ L'objectif de ce projet est de promouvoir la culture locale et d'attirer de nouv
     img: "../assets/images/screenPokemon.gif",
     description:
       "Ce projet est une reproduction du mode de combat du jeu pokémon dans le cadre d'un cours de poo avancée. \
-La principale difficulté de ce projet est qu'il nous a été donné à faire en seulement 1 mois dans une période de stress. De plus, 15 jours ont été requis rien que pour préparer son développement...",
+La principale difficulté de ce projet était sa date de rendu qui nous laissait seulement 20 jours.",
     period: "fin 2019",
     team: "2",
     technologies: ["Java", "JavaFX"] ,
@@ -67,9 +61,8 @@ La principale difficulté de ce projet est qu'il nous a été donné à faire en
     name: "D.E.L.I.R.E.",
     img: "../assets/images/screenDELIRE.png",
     description:
-      "Le projet DELIRE (Développement par Equipe de Livrables Informatiques et Réalisation Encadrée) est une simulation d'appel d'offre par l'AP-HP \
-dans la réalisation de leur nouvelle application de gestion des DMP (Dossier médical partagé) dans le cadre de notre cours de méthodologie et gestion de projet. \
-<br/>Ce projet n'a pas été une simulation dans le sens où il nous a donné énormément de travail et a été très formateur. J'ai notamment appris grâce à ce projet comment travailler en équipe de 6.",
+      "Le projet DELIRE (<i>Développement par Equipe de Livrables Informatiques et Réalisation Encadrée </i>) est une simulation d'appel d'offre par l'AP-HP \
+dans la réalisation de leur nouvelle application de gestion des DMP (Dossier médical partagé) pour un cours de méthodologie et gestion de projet.",
     period: "2019-2020",
     team: "6",
     technologies: ["JavaEE", "API REST", "VueJS", "MySQL", "UML"] ,
@@ -77,16 +70,46 @@ dans la réalisation de leur nouvelle application de gestion des DMP (Dossier m�
     images: ["../assets/images/uml.png", "../assets/images/planning4.png", "../assets/images/screenDELIRE2.png"]
   },
   {
-    name: "Formation Finder",
-    img: "../assets/images/screenFinder.jpg",
-    description: "Ce petit projet est un site dynamique qui utilise les api du gouvernement français pour permettre de rechercher des formations et établissements scolaires. \
-Il a été réalisé dans le cadre d'un cours de développement web.",
-    link: "http://vincent1.heliohost.org/Finder/",
-    period: "début 2020",
+    name: "Manic Shooter",
+    img: "../assets/images/screenManicShooter.gif",
+    description: "Ce petit jeu est un projet de Space-invader avec de nombreux addons. Il est jouable (voir release git) et possède de nombreux ennemis uniques.",
+    period: "fin 2020",
     team: "seul",
-    technologies: ["HTML/CSS", "PHP", "Javascript", "MySQL"] ,
+    technologies: ["C#", ".Net"],
     gitLink: "https://github.com/Pholith/ProjetWebOpenData",
     context: "Scolaire"
+  },
+  {
+    name: "Formation Finder",
+    img: "../assets/images/screenFinder.jpg",
+    description: "Ce petit projet est un site dynamique qui utilise les api du gouvernement français pour permettre de rechercher des formations et établissements scolaires.",
+    //link: "http://vincent1.heliohost.org/Finder/",
+    period: "début 2020",
+    team: "seul",
+    technologies: ["HTML", "CSS", "PHP", "Javascript", "MySQL"] ,
+    gitLink: "https://github.com/Pholith/ProjetWebOpenData",
+    context: "Scolaire"
+  },
+  {
+    name: "Data Visualisation",
+    img: "../assets/images/screenPython.png",
+    description: "Petit projet qui consistait à créer des graphiques à partir de données du gouvernement.",
+    team: "2",
+    period: "fin 2020",
+    technologies: ["Python", "Pandas", "plotly.express"],
+    context: "Scolaire",
+    gitLink: "https://github.com/Pholith/Python-DataVisualisation"
+  },
+  {
+    name: "TerrorBot",
+    img: "../assets/images/terrorBot.png",
+    description: "Projet de programmation assembleur ARM d'un robot. Le TerrorBot fonce droit sur un objet et s'arrête juste avant de le toucher. (vidéo en lien)",
+    team: "2",
+    technologies: ["ARM", "Cortex M3"],
+    context: "Scolaire",
+    period: "fin 2020",
+    link: "https://www.youtube.com/watch?v=UHmo6leS6oE&feature=youtu.be",
+    gitLink: "https://github.com/Pholith/ARM-Stellaris-TerrorBot"
   },
   {
     name: "Suivi production",
@@ -102,8 +125,8 @@ Il a été réalisé dans le cadre d'un cours de développement web.",
     name: "IA",
     img: "../assets/images/screenIA.gif",
     description:
-      "Ces petits projets personnels m'ont appris à découvrir les bases de l'IA, du machine learning et du deep learning. \
-Cette capture d'écran montre un de mes bricolages, un algorythme génétique avec des automates cellulaires.",
+      "Ces petits projets personnels m'ont appris à découvrir les bases de l'IA et des réseaux de neurones. \
+Cette capture d'écran montre un algorythme génétique avec des automates cellulaires.",
     period: "début 2020",
     team: "seul",
     technologies: ["C#", "Unity3D"] ,

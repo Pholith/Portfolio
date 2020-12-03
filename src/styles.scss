@@ -76,6 +76,8 @@ img.cv-icon {
 .project-description {
     background-color: $darkGrey;
     border-radius: 1em;
+    margin-top: 1.2em;
+    min-height: 10vh;
 }
 
 .project-description a {
@@ -91,6 +93,7 @@ img.cv-icon {
     //border-bottom-left-radius: 1em;
     transition: all .2s ease-in;
     object-fit: cover;
+    
 }
 
 .project-description > img:hover {
@@ -111,8 +114,9 @@ img.cv-icon {
 div.project-informations {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    font-size: 0.75em;
+    font-size: 0.8em;
     margin-bottom: 1em;
     background-color: $apointColor;
     padding: 0.5em;
@@ -125,8 +129,7 @@ div.project-informations a {
 
 // Images à dérouler
 .moreImages-visible img {
-    max-height: 16vw;
-    padding: 0.5em;
+    padding: 0.3em;
     display: inline;
 }
 
@@ -171,10 +174,6 @@ body {
 
 }
 
-.project-description {
-    margin-top: 1.2em;
-    min-height: 10vh;
-}
 
 // Disable images and links 
 a.disabled {
