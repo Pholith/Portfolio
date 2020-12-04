@@ -76,7 +76,7 @@ dans la r√©alisation de leur nouvelle application de gestion des DMP (Dossier m√
     period: "fin 2020",
     team: "seul",
     technologies: ["C#", ".Net"],
-    gitLink: "https://github.com/Pholith/ProjetWebOpenData",
+    gitLink: "https://github.com/Pholith/Space-invaders",
     context: "Scolaire"
   },
   {
