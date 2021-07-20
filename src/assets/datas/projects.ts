@@ -13,12 +13,25 @@ var projects = [
       asLink("Harmony", "https://github.com/pardeike/Harmony/wiki") +
       " pour patcher les méthodes du jeu. \
 <br/>Ce projet personnel a été le plus formateur en programmation orientée objet et en \"hacking\".",
-    period: "début 2019-actuel",
+    period: "début 2019 - toujours en cours",
     team: "seul",
     technologies: ["C#", ".NET"] ,
     gitLink: "https://github.com/Pholith/ONI-Mods",
     context: "Personnel",
   },
+  {
+    name: "RobotIndustry",
+    img: "../assets/images/screenRobot1.png",
+    description:
+      "Dans RobotIndustry, vous incarnez un petit robot, vous êtes arrivés sur une nouvelle planète semblable à la Terre. Votre but est de coloniser la planète, de vous reproduire et d'évoluer. \
+      Se reproduire pour un robot, c'est simplement créer des semblables, et évoluer en créant de nouvelles pièces plus sophistiquées.",
+    link: "",
+    period: "début 2021 - toujours en cours",
+    team: "2",
+    technologies: ["C#", "Unity3D"] ,
+    context: "Personel",
+    images: ["../assets/images/screenRobot2.png", "../assets/images/screenRobot3.png", "../assets/images/screenRobot4.png"]  },
+
   {
     name: "Plants-vs-Zombies",
     img: "../assets/images/screenPVZ.gif",
