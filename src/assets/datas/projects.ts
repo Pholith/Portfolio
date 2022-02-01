@@ -25,12 +25,25 @@ var projects = [
     description:
       "Dans RobotIndustry, vous incarnez un petit robot, vous êtes arrivés sur une nouvelle planète semblable à la Terre. Votre but est de coloniser la planète, de vous reproduire et d'évoluer. \
       Se reproduire pour un robot, c'est simplement créer des semblables, et évoluer en créant de nouvelles pièces plus sophistiquées.",
-    link: "",
+    link: "https://pholith.itch.io/robotindustry",
     period: "début 2021 - toujours en cours",
     team: "2",
     technologies: ["C#", "Unity3D"] ,
-    context: "Personel",
-    images: ["../assets/images/screenRobot2.png", "../assets/images/screenRobot3.png", "../assets/images/screenRobot4.png"]  },
+    context: "Personnel",
+    images: ["../assets/images/screenRobot2.png", "../assets/images/screenRobot3.png", "../assets/images/screenRobot4.png"]
+  },
+
+  {
+    name: "Chamber 505",
+    img: "../assets/images/hotel1.png",
+    description:
+      "Chamber 505 est un jeu en réalité virtuel mi-aventure mi-horreur. Le joueur se réveille et doit s'échapper d'un hotel abandonné et squatté par des monstres.",
+    period: "fin 2021 - toujours en cours",
+    team: "7",
+    technologies: ["C#", "Unity3D", "VR", "Oculus Quest"] ,
+    context: "Scolaire",
+    images: ["../assets/images/hotel2.gif", "../assets/images/hotel3.png"]
+  },
 
   {
     name: "Plants-vs-Zombies",
@@ -143,6 +156,17 @@ Cette capture d'écran montre un algorythme génétique avec des automates cellu
     period: "début 2020",
     team: "seul",
     technologies: ["C#", "Unity3D"] ,
+    context: "Personnel"
+  },
+  {
+    name: "Extension StarUML",
+    img: "https://github.com/Pholith/StarUML-ColorExtension/blob/main/readme/demonstration.gif",
+    description:
+      "Petite extension pour le logiciel " + asLink("StarUML", "https://staruml.io/" ) + " qui permet de gérer facilement les couleurs dans des diagrammes.",
+    period: "fin 2020",
+    team: "seul",
+    technologies: ["Javascript"] ,
+    gitLink: "https://github.com/Pholith/StarUML-ColorExtension",
     context: "Personnel"
   }
 ]
