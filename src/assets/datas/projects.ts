@@ -161,7 +161,7 @@ Cette capture d'écran montre un algorythme génétique avec des automates cellu
   },
   {
     name: "Extension StarUML",
-    img: "https://github.com/Pholith/StarUML-ColorExtension/blob/main/readme/demonstration.gif",
+    img: "https://raw.githubusercontent.com/Pholith/StarUML-ColorExtension/main/readme/demonstration.gif",
     description:
       "Petite extension pour le logiciel " + asLink("StarUML", "https://staruml.io/" ) + " qui permet de gérer facilement les couleurs dans des diagrammes.",
     period: "fin 2020",
