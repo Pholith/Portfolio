@@ -98,10 +98,11 @@ dans la réalisation de leur nouvelle application de gestion des DMP (Dossier m�
   {
     name: "Manic Shooter",
     img: "../assets/images/screenManicShooter.gif",
-    description: "Ce petit jeu est un projet de Space-invader avec de nombreux addons. Il est jouable (voir release git) et possède de nombreux ennemis uniques.",
+    description: "Ce petit jeu est un projet de Space-invader avec de nombreux addons. Il est jouable et possède de nombreux ennemis uniques.",
     period: "fin 2020",
     team: "seul",
     technologies: ["C#", ".Net"],
+    link: "https://github.com/Pholith/Space-invaders/releases",
     gitLink: "https://github.com/Pholith/Space-invaders",
     context: "Scolaire"
   },
