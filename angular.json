@@ -44,7 +44,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -125,7 +124,6 @@
         }
       }
     }},
-  "defaultProject": "Portfolio",
   "cli": {
     "analytics": "c93c8b66-ca27-4fec-9b52-e7b66f0a6f51"
   }
