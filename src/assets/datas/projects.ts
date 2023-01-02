@@ -5,7 +5,7 @@ function asLink(text: String, link: String): String {
 var projects = [
   {
     name: "Oni-mods",
-    img: "../assets/images/screenONI.jpg",
+    img: "src/assets/images/screenONI.jpg",
     description:
       "Ensemble de mods (extensions) sur le jeu " +
       asLink("Oxygen Not Included", "https://www.klei.com/games/oxygen-not-included" ) +
@@ -21,7 +21,7 @@ var projects = [
   },
   {
     name: "RobotIndustry",
-    img: "../assets/images/screenRobot1.png",
+    img: "src/assets/images/screenRobot1.png",
     description:
       "Dans RobotIndustry, vous incarnez un petit robot, vous êtes arrivés sur une nouvelle planète semblable à la Terre. Votre but est de coloniser la planète, de vous reproduire et d'évoluer. \
       Se reproduire pour un robot, c'est simplement créer des semblables, et évoluer en créant de nouvelles pièces plus sophistiquées.",
@@ -30,24 +30,24 @@ var projects = [
     team: "2",
     technologies: ["C#", "Unity3D"] ,
     context: "Personnel",
-    images: ["../assets/images/screenRobot2.png", "../assets/images/screenRobot3.png", "../assets/images/screenRobot4.png"]
+    images: ["src/assets/images/screenRobot2.png", "src/assets/images/screenRobot3.png", "src/assets/images/screenRobot4.png"]
   },
 
   {
     name: "Chamber 505",
-    img: "../assets/images/hotel1.png",
+    img: "src/assets/images/hotel1.png",
     description:
       "Chamber 505 est un jeu en réalité virtuel mi-aventure mi-horreur. Le joueur se réveille et doit s'échapper d'un hotel abandonné et squatté par des monstres.",
     period: "fin 2021 - toujours en cours",
     team: "7",
     technologies: ["C#", "Unity3D", "VR", "Oculus Quest"] ,
     context: "Scolaire",
-    images: ["../assets/images/hotel2.gif", "../assets/images/hotel3.png"]
+    images: ["src/assets/images/hotel2.gif", "src/assets/images/hotel3.png"]
   },
 
   {
     name: "Plants-vs-Zombies",
-    img: "../assets/images/screenPVZ.gif",
+    img: "src/assets/images/screenPVZ.gif",
     description:
       "Ce projet est une reproduction du jeu \"Plants VS Zombies\" dans le cadre d'un cours sur la programmation orientée objet.",
     link: "",
@@ -59,7 +59,7 @@ var projects = [
   },
   {
     name: "Site web du chateau de Champs-Sur-Marne",
-    img: "../assets/images/screenChateau.jpg",
+    img: "src/assets/images/screenChateau.jpg",
     description: "Ce site web est mon premier projet tutoré. \
 L'objectif de ce projet est de promouvoir la culture locale et d'attirer de nouveaux visiteurs.",
 
@@ -69,11 +69,11 @@ L'objectif de ce projet est de promouvoir la culture locale et d'attirer de nouv
     technologies: ["HTML", "CSS", "PHP", "Javascript"] ,
     gitLink: "https://github.com/Pholith/Site-Chateau-Champs-sur-Marne",
     context: "Scolaire",
-    images: ["../assets/images/friseChateau.png", "../assets/images/afficheChateau.png", "../assets/images/screenChateau3.png"]
+    images: ["src/assets/images/friseChateau.png", "src/assets/images/afficheChateau.png", "src/assets/images/screenChateau3.png"]
   },
   {
     name: "Pokemon Battle",
-    img: "../assets/images/screenPokemon.gif",
+    img: "src/assets/images/screenPokemon.gif",
     description:
       "Ce projet est une reproduction du mode de combat du jeu pokémon dans le cadre d'un cours de poo avancée. \
 La principale difficulté de ce projet était sa date de rendu qui nous laissait seulement 20 jours.",
@@ -85,7 +85,7 @@ La principale difficulté de ce projet était sa date de rendu qui nous laissait
   },
   {
     name: "D.E.L.I.R.E.",
-    img: "../assets/images/screenDELIRE.png",
+    img: "src/assets/images/screenDELIRE.png",
     description:
       "Le projet DELIRE (<i>Développement par Equipe de Livrables Informatiques et Réalisation Encadrée </i>) est une simulation d'appel d'offre par l'AP-HP \
 dans la réalisation de leur nouvelle application de gestion des DMP (Dossier médical partagé) pour un cours de méthodologie et gestion de projet.",
@@ -93,11 +93,11 @@ dans la réalisation de leur nouvelle application de gestion des DMP (Dossier m�
     team: "6",
     technologies: ["JavaEE", "API REST", "VueJS", "MySQL", "UML"] ,
     context: "Scolaire",
-    images: ["../assets/images/uml.png", "../assets/images/planning4.png", "../assets/images/screenDELIRE2.png"]
+    images: ["src/assets/images/uml.png", "src/assets/images/planning4.png", "src/assets/images/screenDELIRE2.png"]
   },
   {
     name: "Manic Shooter",
-    img: "../assets/images/screenManicShooter.gif",
+    img: "src/assets/images/screenManicShooter.gif",
     description: "Ce petit jeu est un projet de Space-invader avec de nombreux addons. Il est jouable et possède de nombreux ennemis uniques.",
     period: "fin 2020",
     team: "seul",
@@ -108,7 +108,7 @@ dans la réalisation de leur nouvelle application de gestion des DMP (Dossier m�
   },
   {
     name: "Formation Finder",
-    img: "../assets/images/screenFinder.jpg",
+    img: "src/assets/images/screenFinder.jpg",
     description: "Ce petit projet est un site dynamique qui utilise les api du gouvernement français pour permettre de rechercher des formations et établissements scolaires.",
     //link: "http://vincent1.heliohost.org/Finder/",
     period: "début 2020",
@@ -119,7 +119,7 @@ dans la réalisation de leur nouvelle application de gestion des DMP (Dossier m�
   },
   {
     name: "Data Visualisation",
-    img: "../assets/images/screenPython.png",
+    img: "src/assets/images/screenPython.png",
     description: "Petit projet qui consistait à créer des graphiques à partir de données du gouvernement.",
     team: "2",
     period: "fin 2020",
@@ -129,7 +129,7 @@ dans la réalisation de leur nouvelle application de gestion des DMP (Dossier m�
   },
   {
     name: "TerrorBot",
-    img: "../assets/images/terrorBot.png",
+    img: "src/assets/images/terrorBot.png",
     description: "Projet de programmation assembleur ARM d'un robot. Le TerrorBot fonce droit sur un objet et s'arrête juste avant de le toucher. (vidéo en lien)",
     team: "2",
     technologies: ["ARM", "Cortex M3"],
@@ -140,7 +140,7 @@ dans la réalisation de leur nouvelle application de gestion des DMP (Dossier m�
   },
   {
     name: "Suivi production",
-    img: "../assets/images/imprimante.png",
+    img: "src/assets/images/imprimante.png",
     description:
       "Un des projets les plus importants que j'ai réalisé chez Aereco lors de ma deuxième année de DUT en alternance est un suivi de production. \
       Ce projet a eu pour but de calculer, traiter et visualiser le suivi de la production à l'aide des compteurs des imprimantes.",
@@ -150,7 +150,7 @@ dans la réalisation de leur nouvelle application de gestion des DMP (Dossier m�
   },
   {
     name: "IA",
-    img: "../assets/images/screenIA.gif",
+    img: "src/assets/images/screenIA.gif",
     description:
       "Ces petits projets personnels m'ont appris à découvrir les bases de l'IA et des réseaux de neurones. \
 Cette capture d'écran montre un algorythme génétique avec des automates cellulaires.",
