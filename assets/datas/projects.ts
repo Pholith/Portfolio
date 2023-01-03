@@ -13,7 +13,7 @@ var projects = [
       asLink("Harmony", "https://github.com/pardeike/Harmony/wiki") +
       " pour patcher les méthodes du jeu. \
 <br/>Ce projet personnel a été le plus formateur en programmation orientée objet et en \"hacking\".",
-    period: "début 2019 - toujours en cours",
+    period: "début 2019 - maintenance",
     team: "seul",
     technologies: ["C#", ".NET"] ,
     gitLink: "https://github.com/Pholith/ONI-Mods",
