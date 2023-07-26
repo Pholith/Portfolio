@@ -6,6 +6,7 @@
         </p>
         <div class="project-informations d-flex flex-column">
             <a *ngIf="project.link" [href]="project.link"> Lien projet </a>
+            <a *ngIf="project.video" [href]="project.video" target="_blank"> Vidéo du projet </a>
             <div *ngIf="project.period"> Période: {{ project.period }} </div>
             <div> Equipe: {{ project.team }} </div>
             <div> Contexte: {{ project.context }} </div>

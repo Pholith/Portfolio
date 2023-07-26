@@ -39,10 +39,11 @@ var projects = [
     description:
       "Chamber 505 est un jeu en réalité virtuel mi-aventure mi-horreur. Le joueur se réveille et doit s'échapper d'un hotel abandonné et squatté par des monstres.",
     period: "fin 2021 - toujours en cours",
-    team: "7",
+    team: "6",
     technologies: ["C#", "Unity3D", "VR", "Oculus Quest"] ,
     context: "Scolaire",
-    images: ["assets/images/hotel2.gif", "assets/images/hotel3.png"]
+    images: ["assets/images/hotel2.gif", "assets/images/hotel3.png"],
+    video: "assets/TrailerJuRoom505.webm"
   },
 
   {
@@ -135,7 +136,7 @@ dans la réalisation de leur nouvelle application de gestion des DMP (Dossier m�
     technologies: ["ARM", "Cortex M3"],
     context: "Scolaire",
     period: "fin 2020",
-    link: "https://www.youtube.com/watch?v=UHmo6leS6oE&feature=youtu.be",
+    video: "https://www.youtube.com/watch?v=UHmo6leS6oE&feature=youtu.be",
     gitLink: "https://github.com/Pholith/ARM-Stellaris-TerrorBot"
   },
   {
