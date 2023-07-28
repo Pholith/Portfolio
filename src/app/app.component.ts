@@ -12,11 +12,10 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     //this.createCanvas();
   }
-}
 
-  /*
+/*
+  
   private p5;
-
 
   private createCanvas() {
     this.p5 = new p5(this.sketch);
@@ -66,10 +65,10 @@ export class AppComponent implements OnInit {
     }
   }
 
-*/
+}
 
 
-/*
+
 class GameObject {
   constructor() {
   }
@@ -147,6 +146,6 @@ class Square extends GameObject{
     this.p.noStroke();
     this.p.fill(this.p.color(20));
     this.p.rect(this.x - this.sizeX / 2, this.y - this.sizeY / 2, this.sizeX, this.sizeY)
-  }*/
-
-
+  }
+*/
+}
