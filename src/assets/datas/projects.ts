@@ -16,6 +16,7 @@ export const projects = [
   {
     name: "Oni-mods",
     img: "assets/images/screenONI.jpg",
+    hide: false,
     description:
       "Ensemble de mods (extensions) sur le jeu " +
       asLink("Oxygen Not Included", "https://www.klei.com/games/oxygen-not-included") +
@@ -58,8 +59,8 @@ export const projects = [
   },
   {
     name: "Outil de transfert",
-    img: "",
-    hide: true,
+    img: "assets/images/TransfertUI.png",
+    images: ["assets/images/TransfertSchemaFormatPivot-reworked.jpg", "assets/images/TransfertDiagramme des dépendances.png"],
     description:
       `Mon projet le plus important lors de mon alternance de 3 ans chez Julie Solutions est la création d'un outil de transfert. \
       Il permet de convertir différents formats de bases de données (exemple: les données clients du logiciel Julie, et le format ${asLink("TDIO", "https://lescdf.fr/tdio-type-dexportation")} de ${asLink("lesCDF", "https://lescdf.fr/")}.\
@@ -221,4 +222,4 @@ Cette capture d'écran montre un algorythme génétique avec des automates cellu
     gitLink: "https://github.com/Pholith/Portfolio",
     context: Context.Personnel
   }
-]
+];
