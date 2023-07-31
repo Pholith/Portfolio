@@ -24,7 +24,9 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/assets"
+              "src/assets",
+              "google10eec09ddde38917.html",
+              "robots.txt"
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
