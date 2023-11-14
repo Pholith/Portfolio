@@ -8,7 +8,7 @@ export enum Context {
   Personnel = "Personnel"
 }
 
-export const techsToNotFilter = ["Pandas", "Cortex M3", "API REST", "plotly.express", "Harmony", "Btrieve", "VueJS"];
+export const techsToNotFilter = ["Pandas", "Cortex M3", "API REST", "plotly.express", "Harmony", "Btrieve", "VueJS", "Photon Fusion"];
 export const techsToPutTogether = ["Java", "SQL", "HTML / CSS"];
 export const techsSameNameButDifferent = ["Javascript", "C"];
 
