@@ -5,6 +5,7 @@ import { cloneDeep } from 'lodash';
 @Component({
   selector: "app-project-description",
   templateUrl: "./project-description.component.html",
+  standalone: false, 
   styleUrls: ["./project-description.component.scss"],
 })
 

@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "Portfolio": {
@@ -30,8 +30,7 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./src/styles.scss"
             ],
-            "scripts": [
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -66,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Portfolio:build"
+            "buildTarget": "Portfolio:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Portfolio:build:production"
+              "buildTarget": "Portfolio:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Portfolio:build"
+            "buildTarget": "Portfolio:build"
           }
         },
         "test": {
@@ -94,7 +93,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": ["https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"]
+            "scripts": [
+              "https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"
+            ]
           }
         },
         "lint": {
@@ -123,7 +124,8 @@
           }
         }
       }
-    }},
+    }
+  },
   "cli": {
     "analytics": "c93c8b66-ca27-4fec-9b52-e7b66f0a6f51"
   }

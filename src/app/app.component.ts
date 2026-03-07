@@ -4,11 +4,11 @@ import * as p5 from 'p5';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  standalone: false,
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   title = 'Portfolio';
-
   ngOnInit() {
     //this.createCanvas();
   }
