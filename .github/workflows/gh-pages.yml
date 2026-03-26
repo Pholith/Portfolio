@@ -1,13 +1,21 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
+
+
+# IMPORTANT:
+# This github page was a pain to configure
+# I usd as main resource theses links:
+# https://dev.to/railsstudent/day-21-deploy-the-github-profile-project-to-github-pages-p39
+# https://github.com/railsstudent/angular-github-profile/blob/main/.github/workflows/main.yml
+
 name: Deploy static content to Github-Pages
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 # Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
 permissions:
@@ -22,7 +30,7 @@ concurrency:
 
 jobs:
   build:
-     environment:
+    environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
@@ -46,6 +54,11 @@ jobs:
     - name: Build for production
       run: npm run build:prod --if-present
 
+    - name: Add .nojekyll file
+      run: touch dist/.nojekyll
+
+    - name: Add 404.html file
+      run: cp dist/index.html dist/404.html
 
     - name: Setup Pages
       uses: actions/configure-pages@v5
