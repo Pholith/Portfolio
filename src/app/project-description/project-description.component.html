@@ -1,46 +1,62 @@
 <div class="text-center">
-    <div class="filters w-auto d-inline-block">
-        <select (change)="onTechSelected($event.target.value)">
-            <option value=""> Technologie </option>
-            <option *ngFor="let tech of techsList"> {{ tech }} </option>
-        </select>
-        <select (change)="onContextSelected($event.target.value)">
-            <option value=""> Contexte </option>
-            <option *ngFor="let context of contextList"> {{ context }} </option>
-        </select>
-    </div>
+  <div class="filters w-auto d-inline-block">
+    <select (change)="onTechSelected($event.target.value)">
+      <option value=""> Technologie </option>
+      @for (tech of techsList; track tech) {
+        <option> {{ tech }} </option>
+      }
+    </select>
+    <select (change)="onContextSelected($event.target.value)">
+      <option value=""> Contexte </option>
+      @for (context of contextList; track context) {
+        <option> {{ context }} </option>
+      }
+    </select>
+  </div>
 </div>
 
 <div class="d-flex flex-wrap justify-content-between">
 
 
-    <ng-container *ngFor="let project of showedProjects">
-        <div *ngIf="!project.hide" class="project-description row p-2 col-md-6">
-
-            <div [ngClass]="project.img ? 'col-lg-5' : 'col-lg-11'">
-                <p class="name">
-                    {{ project.name }}
-                </p>
-                <div class="project-informations d-flex flex-column">
-                    <a *ngIf="project.link" [href]="project.link"> Lien projet </a>
-                    <a *ngIf="project.video" [href]="project.video" target="_blank"> Vidéo du projet </a>
-                    <div *ngIf="project.period"> Période: {{ project.period }} </div>
-                    <div> Equipe: {{ project.team }} </div>
-                    <div> Contexte: {{ project.context }} </div>
-                    <div> Technologies: {{ project.technologies.join(" / ") }} </div>
-                    <div *ngIf="project.tools"> Outils: {{ project.tools.join(" / ") }} </div>
-                    <a *ngIf="project.gitLink" [href]="project.gitLink"> Git </a>
-                </div>
-                <div [innerHTML]="project.description"></div>
-            </div>
-
-            <img *ngIf="project.img" class="col-lg-7" [src]="project.img" alt="screenshot"
-                [class.disabled]="project.images === undefined" (click)="toggleImages($event)">
-
-            <div class="moreImages-invisible">
-                <img class="col-lg-7" *ngFor="let image of project.images" [src]="image" alt="screenshot">
-            </div>
+  @for (project of showedProjects; track project) {
+    @if (!project.hide) {
+      <div class="project-description row p-2 col-md-6">
+        <div [ngClass]="project.img ? 'col-lg-5' : 'col-lg-11'">
+          <p class="name">
+            {{ project.name }}
+          </p>
+          <div class="project-informations d-flex flex-column">
+            @if (project.link) {
+              <a [href]="project.link"> Lien projet </a>
+            }
+            @if (project.video) {
+              <a [href]="project.video" target="_blank"> Vidéo du projet </a>
+            }
+            @if (project.period) {
+              <div> Période: {{ project.period }} </div>
+            }
+            <div> Equipe: {{ project.team }} </div>
+            <div> Contexte: {{ project.context }} </div>
+            <div> Technologies: {{ project.technologies.join(" / ") }} </div>
+            @if (project.tools) {
+              <div> Outils: {{ project.tools.join(" / ") }} </div>
+            }
+            @if (project.gitLink) {
+              <a [href]="project.gitLink"> Git </a>
+            }
+          </div>
+          <div [innerHTML]="project.description"></div>
         </div>
-
-    </ng-container>
+        @if (project.img) {
+          <img class="col-lg-7" [src]="project.img" alt="screenshot"
+            [class.disabled]="project.images === undefined" (click)="toggleImages($event)">
+        }
+        <div class="moreImages-invisible">
+          @for (image of project.images; track image) {
+            <img class="col-lg-7" [src]="image" alt="screenshot">
+          }
+        </div>
+      </div>
+    }
+  }
 </div>
