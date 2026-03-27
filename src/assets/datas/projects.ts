@@ -44,18 +44,79 @@ export const projects = [
     images: ["assets/images/hotel2.gif", "assets/images/hotel3.png"],
     video: "assets/TrailerJuRoom505.webm"
   },
-  {
-    name: "RobotIndustry",
-    img: "assets/images/screenRobot1.png",
-    description:
-      "Dans RobotIndustry, vous incarnez un petit robot, vous êtes arrivés sur une nouvelle planète semblable à la Terre. Votre but est de coloniser la planète, de vous reproduire et d'évoluer. \
-      Se reproduire pour un robot, c'est simplement créer des semblables, et évoluer en créant de nouvelles pièces plus sophistiquées.",
-    link: "https://pholith.itch.io/robotindustry",
-    period: "début 2021 - en pause",
+    {
+    name: "Virtual Driver Desk",
+    img: "assets/images/alstom/virtual_world3.png",
+    images: [
+      "assets/images/alstom/trainlab_demo.mp4",
+      "assets/images/alstom/virtual_world1.png",
+      "assets/images/alstom/virtual_world2.png",
+      "assets/images/alstom/virtual_world_demo.mp4",
+    ],
+    description: "Le Virtual Driver Desk est un outil qui permet d'aider les techniciens réalisant les tests fonctionnels du train sur des simulateurs, avant la fabrication du vrai train.\
+    Il leur permet d'utiliser le pupitre de conduite en 3D pour faire les tests comme s'ils étaient à la place du conducteur. Cela leur évite de travailler avec des noms de boutons abrupte sur une interface 2D technique.<br/>\
+    Cet outil est direcement connecté à l'outil de test interne et envoie des signaux lors d'actions de l'utilisateur.",
+    period: "septembre 2023 - aujourd'hui",
+    hide: true,
     team: "2",
-    technologies: ["C#", "Unity3D"],
+    technologies: ["Unity3D", "C#"],
+    // tools: [],
+    context: Context.Professionnel
+  },
+  {
+    name: "OneTrain",
+    img: "assets/images/alstom/one_train1.png",
+    images: [
+      "assets/images/alstom/one_train2.png",
+      "assets/images/alstom/one_train3.png",
+      "assets/images/alstom/modular_generation.mp4",
+      "assets/images/alstom/one_train_demo1.mp4",
+    ],
+
+    description: "One Train est un projet ayant pour but de permettre à n'importe qui à Alstom, de créer, tester, visualiser, comprendre et utiliser un train virtuel, ainsi que toute l'architecture du train, dans un environnement 3D.\
+    Cet outil à surtout pour but la formation des nouveaux ingénieurs, mais aussi la démocratisation et la compréhension du fonctionnement pour n'importe quel employé. <br/>\
+    Il est connecté via plusieurs protocoles, nottemment MQTT, et permet aussi de réaliser des tests et des scénarios sur le train.\
+    J'ai pu travaillé sur ce projet avec des infographistes talentueux.",
+    period: "septembre 2023 - aujourd'hui",
+    hide: true,
+    team: "~8",
+    technologies: ["Unity3D", "C#"],
+    // tools: [],
+    context: Context.Professionnel
+  },
+  {
+    name: "HARDCODED Translator mod",
+    img: "assets/images/hardcoded_translated.png",
+    description: "Un mod qui permet la traduction du jeu HARDCODED. <br/>La traduction n'avait pas du tout été prévu par ses développeurs. Ma première expérience avec Godot.",
+    gitLink: "https://github.com/Pholith/HARDCODED_Translation_Mod",
+    period: "mars 2026",
+    team: "seul",
+    technologies: ["Godot", "GDScript", "C#"],
+    tools: ["POEdit", "GDRETools"],
+    context: Context.Personnel
+  },
+  {
+    name: "Lack of Light",
+    img: "assets/images/lol_screenshot1.png",
+    description: 
+    `Lack of Light est un jeu de type <b>rogue lite</b> et <b>RPG</b> inspiré des jeux ${asLink("The Binding of Isaac", "https://store.steampowered.com/app/113200/The_Binding_of_Isaac/?l=french")} \
+    et ${asLink("Enter the Gungeon", "https://store.steampowered.com/app/311690/Enter_the_Gungeon/?l=french")}. J'ai très peu participé au code sur ce projet, \
+    et j'ai surtout réalisé des écritures de dialogues, des pixels arts, de l'administratif pour avancer la sortie du jeu.`,
+    images: [ 
+      "assets/images/lol_screenshot2.png", 
+      "assets/images/lol_screenshot3.png", 
+      "assets/images/lol_screenshot4.png", 
+      "assets/images/lol_screenshot5.png", 
+      "assets/images/lol_screenshot6.png", 
+      "assets/images/lol_screenshot7.png", 
+      "assets/images/lol_screenshot8.png", 
+      "assets/images/lol_map.png"
+    ],
+    period: "2025 - maintenant",
+    team: "3",
+    technologies: ["Unity3D", "C#"],
+    tools: ["Photoshop"],
     context: Context.Personnel,
-    images: ["assets/images/screenRobot2.png", "assets/images/screenRobot3.png", "assets/images/screenRobot4.png"]
   },
   {
     name: "Outil de transfert",
@@ -65,11 +126,24 @@ export const projects = [
       `Mon projet le plus important lors de mon alternance de 3 ans chez Julie Solutions est la création d'un outil de transfert. \
       Il permet de convertir différents formats de bases de données (exemple: les données clients du logiciel Julie, et le format ${asLink("TDIO", "https://lescdf.fr/tdio-type-dexportation")} de ${asLink("lesCDF", "https://lescdf.fr/")}.\
       <br\> Ce projet permet aujourd'hui la converssion de nombreux formats utiles au support et à la vente.`,
-    period: "2020-2023",
+    period: "2020 - 2023",
     team: "2",
     tools: ["Azure Devops", "DBeaver"],
     technologies: ["C#", "C++", "C", "Btrieve", "SQLite"],
     context: Context.Professionnel
+  },
+  {
+    name: "RobotIndustry",
+    img: "assets/images/screenRobot1.png",
+    description:
+      "Dans RobotIndustry, vous incarnez un petit robot, vous êtes arrivés sur une nouvelle planète semblable à la Terre. Votre but est de coloniser la planète, de vous reproduire et d'évoluer. \
+      Se reproduire pour un robot, c'est simplement créer des semblables, et évoluer en créant de nouvelles pièces plus sophistiquées.",
+    link: "https://pholith.itch.io/robotindustry",
+    period: "début 2021",
+    team: "2",
+    technologies: ["C#", "Unity3D"],
+    context: Context.Personnel,
+    images: ["assets/images/screenRobot2.png", "assets/images/screenRobot3.png", "assets/images/screenRobot4.png"]
   },
   {
     name: "Geneden",
@@ -213,12 +287,12 @@ Cette capture d'écran montre un algorythme génétique avec des automates cellu
     context: Context.Personnel
   },
   {
-    name: "Ce ePortfiolio",
+    name: "Ce ePortfolio",
     description:
-      "Ce portfiolio a pour but de mettre en avant mes projets et de m'entraîner sur de nouveaux frameworks comme Angular.",
-    period: "2022 - maintenant",
+      "Ce portfolio a pour but de mettre en avant mes projets et de m'entraîner sur de nouveaux frameworks comme Angular.",
+    period: "2022 - aujourd'hui",
     team: "seul",
-    technologies: ["Angular", "Typescript", "HTML", "SCSS", "Bootstrap" ],
+    technologies: ["Angular", "Typescript", "HTML", "SCSS", "Bootstrap"],
     gitLink: "https://github.com/Pholith/Portfolio",
     context: Context.Personnel
   }

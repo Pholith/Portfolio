@@ -1,16 +1,17 @@
 import { Component, OnInit } from "@angular/core";
 import { projects, Context, techsToNotFilter, techsToPutTogether, techsSameNameButDifferent } from "../../assets/datas/projects";
 import { cloneDeep } from 'lodash';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: "app-project-description",
   templateUrl: "./project-description.component.html",
-  standalone: false, 
+  standalone: false,
   styleUrls: ["./project-description.component.scss"],
 })
 
 export class ProjectDescriptionComponent implements OnInit {
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
 
@@ -21,7 +22,6 @@ export class ProjectDescriptionComponent implements OnInit {
 
     this.techsList = this.getTechnologies();
   }
-
 
   showedProjects = projects;
 
@@ -63,9 +63,20 @@ export class ProjectDescriptionComponent implements OnInit {
     return Array.from(techs).sort();
   }
 
+
+  shouldBeVisible(project): boolean {
+
+    const hideQueryArg = this.route.snapshot.queryParamMap.get("h");
+    if (hideQueryArg !== null) return true;
+
+    return !project.hide
+  }
+
   toggleImages(event: Event) {
     let targetElement: HTMLElement = (event.target as HTMLElement).nextElementSibling as HTMLElement;
     targetElement.classList.toggle("moreImages-visible");
+    targetElement.parentElement.classList.toggle("col-lg-7");
+    targetElement.parentElement.classList.toggle("col-lg-12");
     targetElement.classList.toggle("moreImages-invisible");
   }
 }

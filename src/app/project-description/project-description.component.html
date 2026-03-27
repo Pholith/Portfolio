@@ -1,62 +1,68 @@
 <div class="text-center">
-  <div class="filters w-auto d-inline-block">
-    <select (change)="onTechSelected($event.target.value)">
-      <option value=""> Technologie </option>
-      @for (tech of techsList; track tech) {
-        <option> {{ tech }} </option>
-      }
-    </select>
-    <select (change)="onContextSelected($event.target.value)">
-      <option value=""> Contexte </option>
-      @for (context of contextList; track context) {
-        <option> {{ context }} </option>
-      }
-    </select>
-  </div>
+    <div class="filters w-auto d-inline-block">
+        <select (change)="onTechSelected($event.target.value)">
+            <option value=""> Technologie </option>
+            @for (tech of techsList; track tech) {
+            <option> {{ tech }} </option>
+            }
+        </select>
+        <select (change)="onContextSelected($event.target.value)">
+            <option value=""> Contexte </option>
+            @for (context of contextList; track context) {
+            <option> {{ context }} </option>
+            }
+        </select>
+    </div>
 </div>
 
 <div class="d-flex flex-wrap justify-content-between">
 
 
-  @for (project of showedProjects; track project) {
-    @if (!project.hide) {
-      <div class="project-description row p-2 col-md-6">
+    @for (project of showedProjects; track project) {
+    @if (shouldBeVisible(project)) {
+    <div class="project-description row p-2 col-md-6">
         <div [ngClass]="project.img ? 'col-lg-5' : 'col-lg-11'">
-          <p class="name">
-            {{ project.name }}
-          </p>
-          <div class="project-informations d-flex flex-column">
-            @if (project.link) {
-              <a [href]="project.link"> Lien projet </a>
-            }
-            @if (project.video) {
-              <a [href]="project.video" target="_blank"> Vidéo du projet </a>
-            }
-            @if (project.period) {
-              <div> Période: {{ project.period }} </div>
-            }
-            <div> Equipe: {{ project.team }} </div>
-            <div> Contexte: {{ project.context }} </div>
-            <div> Technologies: {{ project.technologies.join(" / ") }} </div>
-            @if (project.tools) {
-              <div> Outils: {{ project.tools.join(" / ") }} </div>
-            }
-            @if (project.gitLink) {
-              <a [href]="project.gitLink"> Git </a>
-            }
-          </div>
-          <div [innerHTML]="project.description"></div>
+            <p class="name">
+                {{ project.name }}
+            </p>
+            <div class="project-informations d-flex flex-column">
+                @if (project.link) {
+                <a [href]="project.link"> Lien projet </a>
+                }
+                @if (project.video) {
+                <a [href]="project.video" target="_blank"> Vidéo du projet </a>
+                }
+                @if (project.period) {
+                <div> Période: {{ project.period }} </div>
+                }
+                <div> Equipe: {{ project.team }} </div>
+                <div> Contexte: {{ project.context }} </div>
+                <div> Technologies: {{ project.technologies.join(" / ") }} </div>
+                @if (project.tools) {
+                <div> Outils: {{ project.tools.join(" / ") }} </div>
+                }
+                @if (project.gitLink) {
+                <a [href]="project.gitLink"> Git </a>
+                }
+            </div>
+            <div [innerHTML]="project.description"></div>
         </div>
         @if (project.img) {
-          <img class="col-lg-7" [src]="project.img" alt="screenshot"
-            [class.disabled]="project.images === undefined" (click)="toggleImages($event)">
+        <img class="col-lg-7" [src]="project.img" alt="screenshot" [class.disabled]="project.images === undefined"
+            (click)="toggleImages($event)">
         }
         <div class="moreImages-invisible">
-          @for (image of project.images; track image) {
-            <img class="col-lg-7" [src]="image" alt="screenshot">
-          }
+            @for (image of project.images; track image) {
+                @if (image.endsWith(".mp4")) {
+                <video controls autoplay muted="true" loop class="col-lg-7 mediaContent" [src]="image"
+                    type="video/mp4"></video>
+                }
+                @else {
+                <img class="col-lg-7 mediaContent" [src]="image" alt="screenshot">
+                }
+            }
         </div>
-      </div>
+    </div>
     }
-  }
+    }
 </div>

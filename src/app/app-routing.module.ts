@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 
 
 const routes: Routes = [
-  { path: '', component: AppComponent }, // Root route displays Home
+  { path: '', component: AppComponent },
 
 ];
 
